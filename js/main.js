@@ -22,4 +22,11 @@ function calculate() {
   console.log(result);
 
   $("#finalAmount").text(result.toFixed(1));
+
+  var usdRate = $("#usdRate").val();
+
+  var usdResult = result / usdRate;
+
+  $("#finalAmountUSD").text("$" + usdResult.toFixed(2) + " (k)");
+
 }
